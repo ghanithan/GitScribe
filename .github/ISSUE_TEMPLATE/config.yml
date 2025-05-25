@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📋 Project Tasks & Roadmap
+    url: https://github.com/ghanithan/GitScribe/blob/main/project-tasks.md
+    about: View the complete project task breakdown and roadmap
+  - name: 📖 Project Requirements
+    url: https://github.com/ghanithan/GitScribe/blob/main/project-requirement.md
+    about: Read the detailed project requirements and specifications
+  - name: 💬 Discussions
+    url: https://github.com/ghanithan/GitScribe/discussions
+    about: Join community discussions about GitScribe
+  - name: 📚 Documentation
+    url: https://github.com/ghanithan/GitScribe/wiki
+    about: Browse the project documentation and guides 

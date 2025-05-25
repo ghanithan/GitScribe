@@ -1,0 +1,81 @@
+name: ❓ Question / Discussion
+description: Ask a question or start a discussion about GitScribe
+title: "[QUESTION] "
+labels: ["question", "discussion"]
+projects: ["GitScribe Development"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your interest in GitScribe! Please use this template for questions, discussions, or general inquiries.
+        
+        💡 **Tip:** For technical support, consider checking our documentation first.
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: What type of question or discussion is this?
+      options:
+        - "🔧 Technical Implementation"
+        - "📚 Documentation"
+        - "🎯 Project Direction"
+        - "🤝 Contributing"
+        - "🔌 Plugin Development"
+        - "🎨 Theme Development"
+        - "⚙️ Configuration"
+        - "🚀 Deployment"
+        - "💡 General Discussion"
+        - "🆘 Help / Support"
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Question / Discussion Topic
+      description: What would you like to ask or discuss?
+      placeholder: "Describe your question or discussion topic..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Provide any relevant context, background, or what you've already tried
+      placeholder: |
+        - What are you trying to achieve?
+        - What have you already tried?
+        - Any relevant background information?
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment (if applicable)
+      description: If this is a technical question, please provide environment details
+      placeholder: |
+        - OS: [e.g. Windows 11, macOS 14.0, Ubuntu 22.04]
+        - GitScribe Version: [e.g. 0.1.0]
+        - Rust Version: [e.g. 1.75.0]
+        - Other relevant tools/versions
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Information
+      description: Any other information that might be helpful
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      description: Please confirm the following
+      options:
+        - label: "I have searched existing issues and discussions"
+          required: true
+        - label: "I have checked the documentation (when available)"
+          required: false
+        - label: "This is not a bug report or feature request"
+          required: true 

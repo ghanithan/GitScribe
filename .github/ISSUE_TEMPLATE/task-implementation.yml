@@ -1,0 +1,146 @@
+name: 🔧 Task Implementation
+description: Create an issue for implementing a specific task from the project breakdown
+title: "[TASK] T{task_id}: {task_name}"
+labels: ["task", "development"]
+projects: ["GitScribe Development"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for contributing to GitScribe! Please use this template to create an issue for implementing a specific task from our project breakdown.
+        
+        📋 **Reference:** See `project-tasks.md` for the complete task breakdown and dependencies.
+
+  - type: input
+    id: task_id
+    attributes:
+      label: Task ID
+      description: The task identifier from project-tasks.md (e.g., T1.1, T2.3, T6.5)
+      placeholder: "T1.1"
+    validations:
+      required: true
+
+  - type: input
+    id: task_name
+    attributes:
+      label: Task Name
+      description: The full name of the task
+      placeholder: "Repository & Build System Setup"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: phase
+    attributes:
+      label: Project Phase
+      description: Which phase does this task belong to?
+      options:
+        - "Phase 1: Foundation & Core Infrastructure"
+        - "Phase 2: Core Content Processing"
+        - "Phase 3: Asset Processing & Styling"
+        - "Phase 4: Command Line Interface"
+        - "Phase 5: Plugin System"
+        - "Phase 6: Desktop GUI Application"
+        - "Phase 7: Deployment & Publishing"
+        - "Phase 8: Performance & Quality"
+        - "Phase 9: Launch & Community"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority Level
+      description: Task priority from project breakdown
+      options:
+        - "🔴 Critical Path"
+        - "🟡 Parallel Eligible"
+        - "🟢 Independent"
+        - "⚡ Quick Win"
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: List the task IDs that must be completed before this task (from project-tasks.md)
+      placeholder: |
+        - T1.1: Repository & Build System Setup
+        - T1.2: Core Dependencies Integration
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: parallel_work
+    attributes:
+      label: Parallel Execution
+      description: Can this task be worked on in parallel with other tasks?
+      options:
+        - label: "This task can be worked on in parallel with other tasks"
+        - label: "This task blocks other tasks and must be completed sequentially"
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope & Description
+      description: Detailed description of what needs to be implemented
+      placeholder: "Describe the scope and requirements for this task..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: deliverables
+    attributes:
+      label: Deliverables
+      description: List the specific deliverables for this task
+      placeholder: |
+        - [ ] Deliverable 1
+        - [ ] Deliverable 2
+        - [ ] Deliverable 3
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Define the criteria that must be met for this task to be considered complete
+      placeholder: |
+        - [ ] Criterion 1
+        - [ ] Criterion 2
+        - [ ] Criterion 3
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical_notes
+    attributes:
+      label: Technical Notes
+      description: Any additional technical considerations, implementation notes, or constraints
+      placeholder: "Add any technical notes, constraints, or implementation details..."
+
+  - type: dropdown
+    id: estimated_effort
+    attributes:
+      label: Estimated Effort
+      description: Rough estimate of implementation effort
+      options:
+        - "⚡ Quick (< 1 day)"
+        - "🟢 Small (1-2 days)"
+        - "🟡 Medium (3-5 days)"
+        - "🔴 Large (1-2 weeks)"
+        - "🚨 Epic (> 2 weeks)"
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Implementation Checklist
+      description: Standard checklist for task implementation
+      options:
+        - label: "I have reviewed the dependencies in project-tasks.md"
+        - label: "I understand the acceptance criteria"
+        - label: "I have considered the parallel execution opportunities"
+        - label: "I will update documentation as needed"
+        - label: "I will add appropriate tests" 
