@@ -10,6 +10,7 @@ mod pages;
 mod services;
 mod utils;
 mod tailwind;
+mod content;
 
 use pages::{HomePage, Layout};
 use services::init_state;
