@@ -31,7 +31,7 @@ pub fn HomePage(cx: Scope) -> Element {
                     }
                     Button {
                         text: "New Project",
-                        class: "btn-primary"
+                        class: "btn-primary".to_string()
                     }
                 }
                 div {
@@ -46,7 +46,7 @@ pub fn HomePage(cx: Scope) -> Element {
                     }
                     Button {
                         text: "Open Project",
-                        class: "btn-secondary"
+                        class: "btn-secondary".to_string()
                     }
                 }
             }

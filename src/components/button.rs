@@ -3,8 +3,8 @@
 use dioxus::prelude::*;
 
 /// Props for the Button component
-#[derive(Props, Clone, PartialEq)]
-pub struct ButtonProps {
+#[derive(Props)]
+pub struct ButtonProps<'a> {
     /// The text to display on the button
     #[props(into)]
     pub text: String,
@@ -15,7 +15,7 @@ pub struct ButtonProps {
     
     /// Optional onclick handler
     #[props(optional)]
-    pub onclick: Option<EventHandler<MouseEvent>>,
+    pub onclick: Option<EventHandler<'a, MouseEvent>>,
     
     /// Whether the button is disabled
     #[props(default = false)]
@@ -24,7 +24,7 @@ pub struct ButtonProps {
 
 /// Button component
 #[component]
-pub fn Button(cx: Scope<ButtonProps>) -> Element {
+pub fn Button<'a>(cx: Scope<'a, ButtonProps<'a>>) -> Element<'a> {
     let base_class = "btn ".to_string();
     let class = format!("{}{}", base_class, cx.props.class);
     
@@ -37,7 +37,7 @@ pub fn Button(cx: Scope<ButtonProps>) -> Element {
                     handler.call(event);
                 }
             },
-            {&cx.props.text}
+            {cx.props.text.clone()}
         }
     })
 }
