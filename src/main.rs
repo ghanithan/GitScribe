@@ -9,6 +9,7 @@ mod components;
 mod pages;
 mod services;
 mod utils;
+mod tailwind;
 
 use pages::{HomePage, Layout};
 use services::init_state;
@@ -17,6 +18,13 @@ use utils::ThemeProvider;
 fn main() {
     // Initialize the logger
     env_logger::init();
+    
+    // Build Tailwind CSS on application startup
+    // This ensures styles are updated even when not using hot-reload
+    if let Err(e) = tailwind::build_tailwind_css() {
+        eprintln!("Warning: Failed to build Tailwind CSS: {}", e);
+        // Continue even if Tailwind build fails, as it's not critical for app function
+    }
     
     // Launch the Dioxus desktop application
     dioxus_desktop::launch_cfg(

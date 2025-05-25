@@ -28,7 +28,6 @@ A desktop application for creating, managing, and publishing static websites dir
 ### Prerequisites
 
 - Rust (latest stable)
-- curl (for downloading Tailwind CSS CLI)
 
 ### Setup
 
@@ -38,34 +37,25 @@ A desktop application for creating, managing, and publishing static websites dir
    cd GitScribe
    ```
 
-2. Install dependencies
-   ```
-   cargo build
-   ```
-
-3. Build Tailwind CSS
-   ```
-   ./scripts/setup_tailwind.sh build
-   ```
-
-4. Run the application
+2. Build and run the application
    ```
    cargo run
    ```
+
+   This will:
+   - Download the appropriate Tailwind CLI binaries during the build process (first run only)
+   - Build the Tailwind CSS styles
+   - Launch the application
 
 ### Development Workflow
 
 For active development with hot-reload:
 
-1. Start Tailwind CSS watcher
-   ```
-   ./scripts/setup_tailwind.sh watch
-   ```
+```
+cargo run
+```
 
-2. Run with hot-reload
-   ```
-   cargo run
-   ```
+The application automatically builds Tailwind CSS on startup, so there's no need for separate Tailwind commands.
 
 ## License
 
