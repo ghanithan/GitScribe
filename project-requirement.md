@@ -117,8 +117,8 @@ This is the structure that GitScribe will create in the user's GitHub repository
 - Offline-first operation with sync capabilities
 - Secure plugin system with controlled execution
 
-## Known Limitations
-- Static-only rendering (no hybrid/ISR)
-- No built-in CMS (can be added via plugins)
-- Interactive features require manual JS plugin implementation
-- Initial focus on desktop platforms 
+## Design Constraints & Architectural Decisions
+- **Static-first approach:** Focuses on pre-rendered HTML/CSS for optimal performance and security
+- **Desktop-first development:** Initial release targets desktop platforms, with mobile planned for future phases
+- **Plugin-based extensibility:** Advanced features and integrations are implemented through the plugin system
+- **GitHub-centric workflow:** Designed specifically for GitHub-based content management and deployment 
