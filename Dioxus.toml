@@ -1,0 +1,41 @@
+[application]
+name = "GitScribe"
+default_platform = "desktop"
+out_dir = "dist"
+asset_dir = "assets"
+
+[web.app]
+title = "GitScribe"
+
+[web.watcher]
+reload_html = true
+watch_path = ["src", "styles"]
+
+[web.resource]
+style = ["styles/output.css"]
+
+[web.resource.dev]
+script = []
+
+[bundler]
+build_on_save = false
+
+[desktop]
+# Development options
+keep_window_on_build = true
+
+# User-facing options for desktop
+name = "GitScribe"
+width = 1280
+height = 800
+min_width = 800
+min_height = 600
+resizable = true
+fullscreen = false
+transparent = false
+title = "GitScribe"
+theme = "Light"
+menu_on_window = true
+
+# Performance options
+data_dir = "data"
