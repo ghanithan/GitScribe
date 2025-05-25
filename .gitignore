@@ -1,0 +1,22 @@
+/target
+**/*.rs.bk
+Cargo.lock
+
+# Dioxus artifacts
+/dist
+
+# Node.js
+/node_modules
+
+# Tailwind CSS generated files
+/styles/output.css
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
