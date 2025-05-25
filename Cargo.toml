@@ -6,7 +6,6 @@ description = "A desktop application for managing static websites on GitHub"
 authors = ["GitScribe Team"]
 license = "MIT"
 repository = "https://github.com/ghanithan/GitScribe"
-build = "build.rs"
 
 [dependencies]
 # Dioxus core dependencies

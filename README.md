@@ -19,6 +19,7 @@ A desktop application for creating, managing, and publishing static websites dir
   /services            # GitHub API, file management services
   /utils               # Utility functions
 /assets                # Static assets (icons, images)
+/binaries              # Platform-specific Tailwind CLI binaries
 /styles                # Tailwind CSS configuration and custom styles
 /docs                  # Application documentation
 ```
@@ -37,14 +38,18 @@ A desktop application for creating, managing, and publishing static websites dir
    cd GitScribe
    ```
 
-2. Build and run the application
+2. Download Tailwind CLI binaries
+   ```
+   bash scripts/download_tailwind_binaries.sh
+   ```
+
+3. Build and run the application
    ```
    cargo run
    ```
 
    This will:
-   - Download the appropriate Tailwind CLI binaries during the build process (first run only)
-   - Build the Tailwind CSS styles
+   - Build the Tailwind CSS styles using the Tailwind CLI binary for your platform
    - Launch the application
 
 ### Development Workflow
@@ -56,6 +61,11 @@ cargo run
 ```
 
 The application automatically builds Tailwind CSS on startup, so there's no need for separate Tailwind commands.
+
+## Packaging
+
+When packaging the application for distribution (as .dmg, .exe, .apk, .rpm, etc.), 
+include only the Tailwind CLI binary that is relevant for the target platform in the `binaries` directory.
 
 ## License
 

@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # This script downloads all platform-specific Tailwind CLI binaries
-# It should be run during the build process
+# Place them in the binaries directory for use by the application
 
 TAILWIND_VERSION="3.4.1"
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 ROOT_DIR="$(dirname "$SCRIPT_DIR")"
-BINARIES_DIR="$ROOT_DIR/.tailwindcss-binaries"
+BINARIES_DIR="$ROOT_DIR/binaries"
 
 # Create binaries directory if it doesn't exist
 mkdir -p "$BINARIES_DIR"

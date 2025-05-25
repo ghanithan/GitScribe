@@ -6,8 +6,8 @@ Cargo.lock
 /dist
 
 # Tailwind CSS
-/.tailwindcss
-/.tailwindcss-binaries
+/binaries/*.exe
+/binaries/tailwindcss-*
 /styles/output.css
 
 # Editor files
