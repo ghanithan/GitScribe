@@ -28,7 +28,7 @@ A desktop application for creating, managing, and publishing static websites dir
 ### Prerequisites
 
 - Rust (latest stable)
-- Node.js and npm (for Tailwind CSS)
+- curl (for downloading Tailwind CSS CLI)
 
 ### Setup
 
@@ -41,12 +41,11 @@ A desktop application for creating, managing, and publishing static websites dir
 2. Install dependencies
    ```
    cargo build
-   npm install
    ```
 
 3. Build Tailwind CSS
    ```
-   npm run tailwind:build
+   ./scripts/setup_tailwind.sh build
    ```
 
 4. Run the application
@@ -60,7 +59,7 @@ For active development with hot-reload:
 
 1. Start Tailwind CSS watcher
    ```
-   npm run tailwind:watch
+   ./scripts/setup_tailwind.sh watch
    ```
 
 2. Run with hot-reload

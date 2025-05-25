@@ -5,10 +5,8 @@ Cargo.lock
 # Dioxus artifacts
 /dist
 
-# Node.js
-/node_modules
-
-# Tailwind CSS generated files
+# Tailwind CSS
+/.tailwindcss
 /styles/output.css
 
 # Editor files
