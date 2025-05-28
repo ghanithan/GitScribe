@@ -31,5 +31,11 @@ serde_json = "1.0.108"
 # Utility
 fermi = "0.4.3"  # State management for Dioxus
 
+# File discovery and watching
+ignore = "0.4.22"  # File discovery with gitignore pattern support
+notify = "5.1.0"   # File system notifications
+globset = "0.4.13" # Glob pattern matching
+
 [dev-dependencies]
 rstest = "0.18.2"
+tempfile = "3.8.1"  # Temporary file creation for tests
